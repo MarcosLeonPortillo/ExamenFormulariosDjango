@@ -1,5 +1,7 @@
 from django import forms
-
+from datetime import date
+from django.utils import timezone
+import datetime
 # Lista de opciones
 WEEKDAYS = [
     ('0','Lunes'),
@@ -12,6 +14,20 @@ WEEKDAYS = [
 ]
 
 class CalendarForm(forms.Form):
-    '''
-    Formulario para el registro de actividades en en un calendario
-    '''
+    date_from = forms.DateField(
+        label='Fecha Desde',
+        required=True,
+        input_formats=['%d/%m/%Y'],
+        initial= datetime.date.today,
+        label_suffix = ":",
+        help_text="dd/mm/YYYY",
+    )
+
+    date_to = forms.DateField(
+        label='Fecha hasta',
+        required=False,
+        input_formats=['%d/%m/%Y'],
+        initial=None,
+        label_suffix=":",
+        helptext="dd/mm/YYYY"
+    )
