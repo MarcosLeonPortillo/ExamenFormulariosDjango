@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <style>
+        body{
+
+        }
+		table{
+			border: black 1px solid;
+            border-collapse: collapse;
+            text-align: center;
+		}
+		thead{
+			border: black 1px solid;
+            border-collapse: collapse;
+		}
+        th{
+			border: black 1px solid;
+            border-collapse: collapse;
+        }
+        td{
+			border: black 1px solid;
+            border-collapse: collapse;
+            width: 100px;
+        }
+		p{
+			font-size: 18px;
+		}
+		h1{
+			color: blue;
+		}
+		h2{
+			color: green;
+		}
+
+        td.day{
+            background-color: lightgrey;
+        }
+
+        td.content{
+            height: 40px;
+        }
+	</style>
+</head>
+<body>
+<a href="{% url 'index' %}">Inicio</a>
+<h1>
+    Calendarios del
+    XX/XX/XXXX
+    al
+    XX/XX/XXXX
+</h1>
+    <h2> 01 / 2024 </h2>
+<table>
+    <thead>
+    <th>Lunes</th>
+    <th>Martes</th>
+    <th>Miércoles</th>
+    <th>Jueves</th>
+    <th>Viernes</th>
+    <th>Sábado</th>
+    <th>Domingo</th>
+    </thead>
+    <tr>
+        <td class="day">
+            1
+        </td>
+        <td class="day">
+            2
+        </td>
+        <td class="day">
+            3
+        </td>
+        <td class="day">
+            4
+        </td>
+        <td class="day">
+            5
+        </td>
+        <td class="day">
+            6
+        </td>
+        <td class="day">
+            7
+        </td>
+    </tr>
+    <tr>
+        <td class="content">
+            badminton
+        </td>
+        <td class="content">
+            badminton
+        </td>
+        <td class="content">
+            badminton
+        </td>
+        <td class="content">
+            badminton
+        </td>
+        <td class="content">
+            badminton
+        </td>
+        <td class="content">
+            badminton
+        </td>
+        <td class="content">
+            badminton
+        </td>
+    </tr>
+</table>
+<a href="{% url 'index' %}">Inicio</a>
+</body>
+</html>

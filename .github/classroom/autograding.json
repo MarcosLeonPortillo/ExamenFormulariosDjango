@@ -1,0 +1,114 @@
+{
+  "tests": [
+    {
+      "name": "Test atributo date_from en Formulario",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_form_date_from_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 0.5
+    },
+    {
+      "name": "Test atributo date_to en Formulario",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_form_date_to_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 0.5
+    },
+    {
+      "name": "Test atributo weekdays en Formulario",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_form_weekdays_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test atributo activity en Formulario",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_form_activity_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 0.5
+    },
+    {
+      "name": "Test validación general en Formulario",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_form_is_valid",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test creación de formulario en index",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_view_index_form",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test registro de url para /calendar/",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_url_calendar",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 0.5
+    },
+    {
+      "name": "Test envío formulario a View calendar - Templates",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_view_calendar",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 40,
+      "points": 1
+    },
+    {
+      "name": "Test template calendar.html cabecera H1",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_template_calendar_h1",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1
+    },
+    {
+      "name": "Test template calendar.html cabeceras H2",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_template_calendar_month_tittles",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1.5
+    },
+    {
+      "name": "Test calendar.html tablas mensuales",
+      "setup": "",
+      "run": "pytest .github/tests/test_forms.py::test_template_calendar_monthly_tables",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 12,
+      "points": 1.5
+    }
+  ]
+}
