@@ -31,3 +31,13 @@ class CalendarForm(forms.Form):
         label_suffix=":",
         help_text="dd/mm/YYYY"
     )
+
+    weekdays = forms.MultipleChoiceField(
+        label='Días de la semana',
+        choices=WEEKDAYS,
+        widget=forms.CheckboxSelectMultiple,
+        initial=None,
+        required=True,
+        label_suffix=":",
+        help_text="Elige al menos un día"
+    )
