@@ -64,7 +64,7 @@ class CalendarForm(forms.Form):
 
             if date_to > date_from:
 
-                if (date_to - date_from).days >= 6:
+                if (date_to - date_from).days >= 7:
                     raise ValidationError("La fecha hasta debe contemplar al menos 7 días de diferencia")
 
         return cleaned_data
