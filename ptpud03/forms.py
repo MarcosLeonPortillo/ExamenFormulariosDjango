@@ -41,3 +41,13 @@ class CalendarForm(forms.Form):
         label_suffix=":",
         help_text="Elige al menos un día"
     )
+
+    activity = forms.CharField(
+        label='Actividad',
+        required=True,
+        max_length=20,
+        label_suffix=":",
+        initial=None,
+        help_text="Introduce el título de la actividad",
+
+    )
