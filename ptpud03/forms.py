@@ -2,6 +2,7 @@ from django import forms
 from datetime import date
 from django.utils import timezone
 import datetime
+from django.core.exceptions import ValidationError
 # Lista de opciones
 WEEKDAYS = [
     ('0','Lunes'),
@@ -51,3 +52,19 @@ class CalendarForm(forms.Form):
         help_text="Introduce el título de la actividad",
 
     )
+
+    def clean(self):
+        cleaned_data = super().clean()
+        date_from = cleaned_data.get("Fecha Desde")
+        date_to = cleaned_data.get("Fecha Hasta")
+        weekdays = cleaned_data.get("Días  de la semana")
+        activity = cleaned_data.get("Actividad")
+
+        if date_to:
+
+            if date_to > date_from:
+
+                if (date_to - date_from).days >= 6:
+                    raise ValidationError("La fecha hasta debe contemplar al menos 7 días de diferencia")
+
+        return cleaned_data
