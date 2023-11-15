@@ -24,10 +24,10 @@ class CalendarForm(forms.Form):
     )
 
     date_to = forms.DateField(
-        label='Fecha hasta',
+        label='Fecha Hasta',
         required=False,
         input_formats=['%d/%m/%Y'],
         initial=None,
         label_suffix=":",
-        helptext="dd/mm/YYYY"
+        help_text="dd/mm/YYYY"
     )
