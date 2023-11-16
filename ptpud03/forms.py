@@ -57,14 +57,8 @@ class CalendarForm(forms.Form):
         cleaned_data = super().clean()
         date_from = cleaned_data.get("Fecha Desde")
         date_to = cleaned_data.get("Fecha Hasta")
-        weekdays = cleaned_data.get("Días  de la semana")
-        activity = cleaned_data.get("Actividad")
 
-        if date_to:
-
-            if date_to > date_from:
-
-                if (date_to - date_from).days >= 7:
-                    raise ValidationError("La fecha hasta debe contemplar al menos 7 días de diferencia")
+        if date_to and (date_to - date_from).days < 6:
+             raise ValidationError("La fecha hasta debe contemplar al menos 7 días de diferencia")
 
         return cleaned_data
